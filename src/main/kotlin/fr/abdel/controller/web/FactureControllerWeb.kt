@@ -6,6 +6,7 @@ import fr.abdel.service.InterfaceFactureService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.stereotype.Controller
+import org.springframework.web.bind.annotation.RequestMapping
 
 @Controller
 class FactureControllerWeb: InterfaceFactureController {
@@ -23,5 +24,11 @@ class FactureControllerWeb: InterfaceFactureController {
         facture.cutomerName = customerName
 
         factureService.createFacture(facture)
+    }
+
+    @RequestMapping("/facture")
+    fun displayHome(): String{
+        println("La méthode displayHome a été appelée")
+        return "index"
     }
 }

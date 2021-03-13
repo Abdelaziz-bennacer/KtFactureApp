@@ -6,7 +6,7 @@ import fr.abdel.service.InterfaceFactureService
 import org.springframework.stereotype.Service
 
 private var lastNumber: Long = 0L
-@Service
+//@Service
 class FactureServiceNumber: InterfaceFactureService {
 
 

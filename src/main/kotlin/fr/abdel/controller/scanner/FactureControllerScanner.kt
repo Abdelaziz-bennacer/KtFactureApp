@@ -5,7 +5,7 @@ import fr.abdel.entity.Facture
 import fr.abdel.service.InterfaceFactureService
 import org.springframework.stereotype.Controller
 
-@Controller
+//@Controller
 class FactureControllerScanner: InterfaceFactureController {
 
     private lateinit var factureService: InterfaceFactureService

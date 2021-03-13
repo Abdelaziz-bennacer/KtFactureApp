@@ -4,25 +4,24 @@ package fr.abdel
 import fr.abdel.controller.InterfaceFactureController
 import fr.abdel.service.InterfaceFactureService
 import fr.abdel.service.prefix.FactureServicePrefix
+import org.springframework.boot.SpringApplication
+import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.ApplicationContext
 import org.springframework.context.annotation.*
 
-@Configuration
-@ComponentScan("fr.abdel.controller.web", /*"fr.abdel.repository.database",*/ "fr.abdel.service.prefix")
-@PropertySource("classpath:application.properties")
+@SpringBootApplication
+//@Configuration
+//@ComponentScan
+//@PropertySource("classpath:application.properties")
 open class MainApp
-
-@Bean
-fun configure(): InterfaceFactureService{
-    return FactureServicePrefix()
-}
 
 
 fun main(args:Array<String>) {
 
 
     //val context: ApplicationContext = ClassPathXmlApplicationContext("applicationContext.xml")
-    val context: ApplicationContext = AnnotationConfigApplicationContext(MainApp::class.java)
+    //val context: ApplicationContext = AnnotationConfigApplicationContext(MainApp::class.java)
+    val context: ApplicationContext = SpringApplication.run(MainApp::class.java, *args)
     val factureController = context.getBean(InterfaceFactureController::class.java)
 
     factureController.createFacture()

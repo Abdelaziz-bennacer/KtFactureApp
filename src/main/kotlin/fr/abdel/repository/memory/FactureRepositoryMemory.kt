@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository
 
 private var factures = mutableListOf<Facture>()
 
-@Repository
+//@Repository
 class FactureRepositoryMemory: InterfaceFactureRepository {
 
 

@@ -6,7 +6,7 @@ import fr.abdel.service.InterfaceFactureService
 import org.springframework.stereotype.Controller
 import java.util.*
 
-@Controller
+//@Controller
 class FactureControllerKeyboard: InterfaceFactureController {
 
     private lateinit var factureService: InterfaceFactureService
